@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>News</display-name>
+  <welcome-file-list>
+    <welcome-file>a.jsp</welcome-file>
+   
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name>indexServlet</servlet-name>
+  	<servlet-class>com.web.IndexServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>indexServlet</servlet-name>
+  	<url-pattern>/goIndex</url-pattern>
+  </servlet-mapping>
+
+
+ <servlet>
+  	<servlet-name>initServlet</servlet-name>
+  	<servlet-class>com.web.InitServlet</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>initServlet</servlet-name>
+  	<url-pattern>/init</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>newsServlet</servlet-name>
+  	<servlet-class>com.web.NewsServlet</servlet-class>
+  	
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>newsServlet</servlet-name>
+  	<url-pattern>/news</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>commentServlet</servlet-name>
+  	<servlet-class>com.web.CommentServlet</servlet-class>
+  
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>commentServlet</servlet-name>
+  	<url-pattern>/comment</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>userServlet</servlet-name>
+  	<servlet-class>com.web.UserServlet</servlet-class>
+  	
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>userServlet</servlet-name>
+  	<url-pattern>/user</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>linkServlet</servlet-name>
+  	<servlet-class>com.web.LinkServlet</servlet-class>	
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>linkServlet</servlet-name>
+  	<url-pattern>/link</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+  	<servlet-name>newsTypeServlet</servlet-name>
+  	<servlet-class>com.web.NewsTypeServlet</servlet-class>	
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>newsTypeServlet</servlet-name>
+  	<url-pattern>/newsType</url-pattern>
+  </servlet-mapping>
+
+ <servlet>
+  	<servlet-name>imageUpload</servlet-name>
+  	<servlet-class>com.web.ImageUploadServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>imageUpload</servlet-name>
+  	<url-pattern>/imageUpload</url-pattern>
+  </servlet-mapping>
+</web-app>
